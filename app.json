@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/DemocraticEvaluationForm/DemocraticEvaluationForm",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "一报告二评议",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
