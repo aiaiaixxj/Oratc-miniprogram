@@ -3,9 +3,6 @@
   <text class="main_title" style=""> <text class="main_title_mask" style="">|</text> 2020选人用人工作民主评价表</text>
 </view>
 <view class="page-section">
-  <!-- <view class="page-section-title">
-    <text>flex-direction: column\n纵向布局</text>
-  </view> -->
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item flex-item-V content-text-1">
       <view>
@@ -62,7 +59,6 @@
         <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
             style="">|</text>对本区（单位）从严管理监督干部情况的评价</text>
       </view>
-     
     </view>
   </view>
 </view>
