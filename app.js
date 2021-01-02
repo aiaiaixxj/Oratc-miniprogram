@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    URL:''
+    URL:'http://59.173.242.36:8081/'
   }
 })

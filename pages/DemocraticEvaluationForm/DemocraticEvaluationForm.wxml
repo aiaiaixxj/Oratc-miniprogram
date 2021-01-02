@@ -41,24 +41,36 @@
         <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
             style="">|</text>对本区（单位）选人用人工作存在的主要问题是什么？（可多选）</text>
       </view>
-      
         <checkbox-group bindchange="checkboxChange" >
           <block wx:for="{{items}}" wx:key="index">
-          <!-- {{item.name}} -->
           <view style="margin-left:20px;">
-            <radio value='{{item.value}}' >
-              {{item.name}}
-            </radio>
+              <checkbox value="{{item.value}}" checked="{{item.checked}}">
+                {{item.name}}
+              </checkbox>
           </view>
         </block>
         </checkbox-group>
-      
     </view>
     <view class="flex-item flex-item-V content-text-3">
       <view>
         <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
-            style="">|</text>对本区（单位）从严管理监督干部情况的评价</text>
+            style="">|</text>您对解决上述存在的突出问题有何建议？</text>
       </view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur"  style="height:120px"/>
+    </view>
+    </view>
+    <view class="flex-item flex-item-V content-text-3">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>对本区（单位）选人用人有何意见建议？</text>
+      </view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur"  style="height:120px;width:90%"/>
+    </view>
     </view>
   </view>
+</view>
+<view>
+  <button  style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px"> 提交、进入新提拔干部民主评议 </button>
 </view>

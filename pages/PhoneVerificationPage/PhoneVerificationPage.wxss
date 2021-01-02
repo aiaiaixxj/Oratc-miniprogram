@@ -1,0 +1,60 @@
+/* pages/PhoneVerificationPage/PhoneVerificationPage.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#5681d7, #486ec3);
+}
+.img {
+  width:100%;
+  height:100%;
+}
+.container { 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  padding: 0; 
+ } 
+.changeInfo{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  position: absolute;
+  width: 90%;
+  margin: 40% auto;
+}
+.changeInfoName{
+  position: relative;
+  height: 80rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #bbb;
+  width: 30%;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 60rpx;
+}
+.changeInfoName input{
+  width: 100%;
+  height:100%;
+}
+.changeBtn{
+  width: 100%; 
+  margin-top: 20px; 
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  letter-spacing: 6px;
+  background-color:#E8342F; 
+}

@@ -1,4 +1,4 @@
-/* pages/DemocraticEvaluationForm/DemocraticEvaluationForm.wxss */
+/* pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm.wxss */
 .main_title {
   font-weight: 400;
   font-size: 15px;
@@ -48,13 +48,16 @@
   font-size: 36rpx;
 }
 
-/* .content-text-1:before{
-  content: 'A';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+.content-text-1-info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 16px;
+  margin: 20 auto;
+  margin-top: 13px;
+  margin-left: 10px
+}
+
 .content-text-2 {
   position: relative;
   align-items: center;
@@ -64,13 +67,6 @@
   font-size: 36rpx;
 }
 
-/* .content-text-2:before{
-  content: 'B';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .content-text-3 {
   position: relative;
   align-items: center;
@@ -80,13 +76,6 @@
   font-size: 36rpx;
 }
 
-/* .content-text-3:before{
-  content: 'C';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .content-text-1-title {
   font-weight: 400;
   font-size: 15px;
@@ -102,24 +91,34 @@
   font-weight: bolder;
   font-size: 15px;
 }
+
 radio {
   zoom: 80%;
   color: black;
 }
-radio-group{
-  margin-top:20rpx
+
+radio-group {
+  margin-top: 20rpx
 }
-checkbox-group{
-  margin-top:10rpx;
-}
-checkbox{
-  zoom: 80%;
-  color: black; 
-}
+
 .textarea-wrp {
   padding: 0rpx 25rpx;
   width: 88%;
   margin-left: 20rpx;
   background-color: #fff;
   border: 1px solid gray;
+}
+
+button {
+  background-color: #D8271D;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.bottom-bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  background-color: #EEEEEE;
 }

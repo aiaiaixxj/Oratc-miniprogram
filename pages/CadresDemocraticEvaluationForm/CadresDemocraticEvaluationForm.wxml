@@ -1,0 +1,58 @@
+<!--pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm.wxml-->
+<view>
+  <text class="main_title" style=""> <text class="main_title_mask" style="">|</text> 2020年新提拔干部民主评议表</text>
+</view>
+<view class="page-section">
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item flex-item-V content-text-1">
+      <view class="content-text-1-info" style="">
+        <block wx:for="{{infoLIst}}" wx:key="index">
+          <view style="">
+            姓名：{{item.name}}
+          </view>
+          <view style="">
+            出生年月：{{item.birthDay}}
+          </view>
+          <view style="">
+            原任职务：{{item.BeforeDuty[0]}}
+          </view>
+          <view style="">
+            现任职务：{{item.AfterDuty[0]}}
+          </view>
+          <view style="">
+            任职时间：{{item.employmentPeriod}}
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="flex-item flex-item-V content-text-2">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>你对提拔该干部的看法？</text>
+      </view>
+      <radio-group bindchange="radiochange">
+        <block wx:for="{{radioList}}" wx:key="index">
+          <!-- {{item.name}} -->
+          <view style="margin-left:20px;">
+            <radio value='{{item.value}}' checked="{{item.checked}}">
+              {{item.name}}
+            </radio>
+          </view>
+        </block>
+      </radio-group>
+    </view>
+    <view class="flex-item flex-item-V content-text-3">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>您对当前干部提拔任用不认同的主要原因是？</text>
+      </view>
+      <view class="textarea-wrp">
+        <textarea bindblur="bindTextAreaBlur" style="height:120px" />
+        </view>
+    </view>
+  </view>
+  <view class="bottom-bar" style="">
+  <button  style=""> 上一位 </button>
+  <button  style=""> 下一位 </button>
+</view>
+</view>
