@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  color: #FFFFFF;
+  color: black;
   font-size: 36rpx;
 }
 
@@ -107,6 +107,7 @@ radio-group {
   margin-left: 20rpx;
   background-color: #fff;
   border: 1px solid gray;
+  margin-top: 20px;
 }
 
 button {

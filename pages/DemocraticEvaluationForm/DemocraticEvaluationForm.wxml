@@ -6,11 +6,45 @@
   <view class="page-section">
     <view wx:for="{{ questionArray}}" wx:key="*this" wx:for-item="questionitem">
       <view class="flex-wrp" style="flex-direction:column;">
-        <view class="flex-item flex-item-V  ">
-          <view style="position:relative">
-        <text class="" style=""> {{questionitem.questionContent}}</text>
-        <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
-          <text>{{optionitem.optionContent}}</text></view>
+        <view class="flex-item flex-item-V content-text-1 ">
+          <text class="" style="position:relative;top:20px "> <text class="content-text-1-title-mask"
+              style="">|</text>{{questionitem.questionContent}}</text>
+          <view wx:if="{{questionitem.flag ==0}}">
+            <radio-group bindchange="radiochange">
+              <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
+
+                <view style="margin-left:20px;margin-top:20px">
+
+                  <radio value='{{questionitem.questionId}},{{optionitem.optionId}}'>
+                    {{optionitem.optionContent}}
+                  </radio>
+                </view>
+              </view>
+            </radio-group>
+          </view>
+
+          <view wx:elif="{{questionitem.flag ==1}}">
+            <view style="margin-left:20px;">
+              <checkbox-group bindchange="checkboxChange">
+                <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
+                <view style="margin-left:0px;">
+                  <checkbox value='{{questionitem.questionId}},{{optionitem.optionId}}' data-id="{{questionitem.questionId}}" bindtap="check">
+                    {{optionitem.optionContent}}
+                  </checkbox>
+                </view>
+                </view>
+              </checkbox-group>
+            </view>
+          </view>
+          <view wx:elif="{{questionitem.flag ==2}}" bindtap="handleJumpPage" data-id="{{questionitem.questionId}}">
+
+            <view class="textarea-wrp">
+
+              <textarea bindblur="bindTextAreaBlur" style="height:150px;" />
+              </view>
+            </view>
+               
+            <!-- <text>{{optionitem.optionContent}}</text> -->
           </view>
         </view>
       </view>
@@ -20,7 +54,7 @@
 
 
 
-</view>
+
 <!-- <view class="page-section">
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item flex-item-V content-text-1">
@@ -91,6 +125,6 @@
   </view>
 </view> -->
 <view>
-  <button style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px">
+  <button style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px" bindtap="">
     提交、进入新提拔干部民主评议 </button>
 </view>
