@@ -35,7 +35,7 @@
   margin: 0 auto;
   margin-top: 30rpx;
   width: 96%;
-  height: 470rpx;
+  min-height: 470rpx;
   /* border-radius: 10px; */
 }
 
@@ -56,9 +56,9 @@
   transform: translate(-50%, -50%);
 } */
 .content-text-2 {
-  position: relative;
-  align-items: center;
-  justify-content: center;
+ /* position: absolute;  */
+   align-items: center; 
+   justify-content: center; 
   background-color: white;
   color: #FFFFFF;
   font-size: 40rpx;

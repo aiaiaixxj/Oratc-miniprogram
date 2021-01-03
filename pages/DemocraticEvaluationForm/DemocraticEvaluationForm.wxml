@@ -2,7 +2,26 @@
 <view>
   <text class="main_title" style=""> <text class="main_title_mask" style="">|</text> {{themeName}}</text>
 </view>
-<view class="page-section">
+<view>
+  <view class="page-section">
+    <view wx:for="{{ questionArray}}" wx:key="*this" wx:for-item="questionitem">
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V  ">
+          <view style="position:relative">
+        <text class="" style=""> {{questionitem.questionContent}}</text>
+        <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
+          <text>{{optionitem.optionContent}}</text></view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+
+</view>
+<!-- <view class="page-section">
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item flex-item-V content-text-1">
       <view>
@@ -11,7 +30,7 @@
       </view>
       <radio-group bindchange="radiochange">
         <block wx:for="{{radioList}}" wx:key="index">
-          <!-- {{item.name}} -->
+         
           <view style="margin-left:20px;">
             <radio value='{{item.value}}' checked="{{item.checked}}">
               {{item.name}}
@@ -27,7 +46,7 @@
       </view>
       <radio-group bindchange="radiochange">
         <block wx:for="{{radioList}}" wx:key="index">
-          <!-- {{item.name}} -->
+        
           <view style="margin-left:20px;">
             <radio value='{{item.value}}' checked="{{item.checked}}">
               {{item.name}}
@@ -70,7 +89,8 @@
     </view>
     </view>
   </view>
-</view>
+</view> -->
 <view>
-  <button  style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px"> 提交、进入新提拔干部民主评议 </button>
+  <button style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px">
+    提交、进入新提拔干部民主评议 </button>
 </view>

@@ -8,6 +8,8 @@ Page({
   data: {
     accountId: null, //存放账户id
     themeName: null, //标题名字
+    questionArray:null,
+
     focus: false,
     radioList: [{
         id: 0,
@@ -55,7 +57,10 @@ Page({
         value: 'UK',
         name: '英国'
       }
-    ]
+    ],
+    questionArray_0_optionArray:[
+
+    ],
   },
   /**
    * 
@@ -120,8 +125,16 @@ Page({
         console.log(e.questionArray);
         that.setData({
           themeName: e.themeName,
-
+          questionArray:e.questionArray,
+     
         })
+        var values=function(object) {
+          var values = [];
+          for (var property in object)
+            values.push(object[property]);
+          return values;
+        }
+
 
         //4.解密成功后 获取自己服务器返回的结果
       },
