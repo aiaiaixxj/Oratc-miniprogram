@@ -33,14 +33,14 @@ page{
   box-sizing: border-box;
 }
 .codeBtn{
-  position: absolute;
-  right: 0;
-  top: 0;
   color: #bbb;
-  width: 30%;
-  font-size: 26rpx;
+  width: 80px;
+  font-size: 30rpx;
   height: 80rpx;
-  line-height: 60rpx;
+  line-height: 80rpx;
+  margin-top: -40px;
+  margin-left: 70%;
+  z-index: 99;
 }
 .changeInfoName input{
   width: 100%;
@@ -57,4 +57,13 @@ page{
   color: white;
   letter-spacing: 6px;
   background-color:#E8342F; 
+}
+button{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  margin-left: 67%;
+}
+
+.mini-btn{
+  margin-right: 10rpx;
 }

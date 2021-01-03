@@ -62,6 +62,13 @@ Page({
           console.log(res.data);
           console.log(res.data.json);
           console.log(JSON.parse(res.data.json));
+          if(res.data.msg=='手机号已绑定'){
+            wx.showToast({
+              title: '手机号已绑定!',
+              icon: 'none',
+              duration: 1000
+            })
+          }
           let mycode = JSON.parse(res.data.json)
           _this.setData({
             iscode: mycode.code
@@ -91,6 +98,7 @@ Page({
   },
   //获取验证码
   getVerificationCode() {
+    console.log("click")
     this.getCode();
     var _this = this
     _this.setData({
@@ -141,6 +149,7 @@ Page({
     } else {
       // wx.setStorageSync('name', this.data.name);
       wx.setStorageSync('phone', this.data.phone);
+
       wx.redirectTo({
         url: '../DemocraticEvaluationForm/DemocraticEvaluationForm',
       });

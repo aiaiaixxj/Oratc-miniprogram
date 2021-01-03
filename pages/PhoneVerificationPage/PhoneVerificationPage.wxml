@@ -14,9 +14,10 @@
      <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}'/> 
   </view>
   <view class='changeInfoName'>
-     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:70%;'/> 
-     <button class='codeBtn' bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
+     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:100%;'/> 
+    
   </view>
+  <button class="mini-btn" type="default" size="mini" bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
   <view class='changeBtn' bindtap='save'>验证</view>
 </view>
 </view>

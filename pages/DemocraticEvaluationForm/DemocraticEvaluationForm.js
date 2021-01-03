@@ -1,10 +1,13 @@
 // pages/DemocraticEvaluationForm/DemocraticEvaluationForm.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    accountId: null, //存放账户id
+    themeName: null, //标题名字
     focus: false,
     radioList: [{
         id: 0,
@@ -42,7 +45,7 @@ Page({
       {
         value: 'CHN',
         name: '中国',
-       
+
       },
       {
         value: 'BRA',
@@ -74,7 +77,7 @@ Page({
       items[i].checked = false;
       for (let j = 0, lenJ = values.length; j < lenJ; ++j) {
         if (items[i].value === values[j]) {
-          console.log("i,j",i,j);
+          console.log("i,j", i, j);
           items[i].checked = true;
           break
         }
@@ -96,7 +99,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    that.setData({
+      accountId: wx.getStorageSync('accountId')
+    })
+    wx.request({
+      url: app.globalData.URL + '/app/member-theme1-list.jspx', //自己的服务接口地址
+      method: 'post',
+      data: {
+        accountId: this.data.accountId,
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res.data);
 
+        var e = JSON.parse(res.data.json);
+        console.log(e);
+        console.log(e.questionArray);
+        that.setData({
+          themeName: e.themeName,
+
+        })
+
+        //4.解密成功后 获取自己服务器返回的结果
+      },
+      fail: function () {}
+    })
   },
 
   /**

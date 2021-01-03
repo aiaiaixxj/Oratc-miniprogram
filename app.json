@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/DemocraticEvaluationForm/DemocraticEvaluationForm",
     "pages/login/login",
-    "pages/PhoneVerificationPage/PhoneVerificationPage",
-
+   
     "pages/EvaluationComplete/EvaluationComplete",
     "pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm",
-    "pages/DemocraticEvaluationForm/DemocraticEvaluationForm",
+
+   
+   
     "pages/index/index",
     "pages/logs/logs"
 
