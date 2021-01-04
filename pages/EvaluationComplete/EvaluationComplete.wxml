@@ -1,0 +1,9 @@
+<!--pages/EvaluationComplete/EvaluationComplete.wxml-->
+<view style="display:flex;flex-direction:column;margin-top:30%;">
+  <image style="margin: 0 auto" src="../../images/i1.png"></image>
+  <text style="margin: 0 auto" >评价完成，感谢您的参与！</text>
+</view>
+<view>
+  <button  style="background-color:#D8271D;color:white;font-size:14px; letter-spacing:4px;margin-top:30px;width:80%">关闭 </button>
+</view>
+

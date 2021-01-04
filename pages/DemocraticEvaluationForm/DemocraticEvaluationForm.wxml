@@ -1,0 +1,128 @@
+<!--pages/DemocraticEvaluationForm/DemocraticEvaluationForm.wxml-->
+<view>
+  <text class="main_title" style=""> <text class="main_title_mask" style="">|</text> {{themeName}}</text>
+</view>
+<view>
+  <view class="page-section">
+    <view wx:for="{{ questionArray}}" wx:key="*this" wx:for-item="questionitem">
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V content-text-1 ">
+          <text class="" style="position:relative;top:20px "> <text class="content-text-1-title-mask"
+              style="">|</text>{{questionitem.questionContent}}</text>
+          <view wx:if="{{questionitem.flag ==0}}">
+            <radio-group bindchange="radiochange">
+              <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
+
+                <view style="margin-left:20px;margin-top:20px">
+
+                  <radio value='{{questionitem.questionId}},{{optionitem.optionId}}'>
+                    {{optionitem.optionContent}}
+                  </radio>
+                </view>
+              </view>
+            </radio-group>
+          </view>
+
+          <view wx:elif="{{questionitem.flag ==1}}">
+            <view style="margin-left:20px;">
+              <checkbox-group bindchange="checkboxChange">
+                <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
+                <view style="margin-left:0px;">
+                  <checkbox value='{{questionitem.questionId}},{{optionitem.optionId}}' data-id="{{questionitem.questionId}}" bindtap="check">
+                    {{optionitem.optionContent}}
+                  </checkbox>
+                </view>
+                </view>
+              </checkbox-group>
+            </view>
+          </view>
+          <view wx:elif="{{questionitem.flag ==2}}" bindtap="handleJumpPage" data-id="{{questionitem.questionId}}">
+            <view class="textarea-wrp">
+              <textarea bindblur="bindTextAreaBlur" style="height:150px;" />
+              </view>
+            </view>
+               
+            <!-- <text>{{optionitem.optionContent}}</text> -->
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+
+
+<!-- <view class="page-section">
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item flex-item-V content-text-1">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>对本区（单位）选人用人工作的总体评价</text>
+      </view>
+      <radio-group bindchange="radiochange">
+        <block wx:for="{{radioList}}" wx:key="index">
+         
+          <view style="margin-left:20px;">
+            <radio value='{{item.value}}' checked="{{item.checked}}">
+              {{item.name}}
+            </radio>
+          </view>
+        </block>
+      </radio-group>
+    </view>
+    <view class="flex-item flex-item-V content-text-2">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>对本区（单位）从严管理监督干部情况的评价</text>
+      </view>
+      <radio-group bindchange="radiochange">
+        <block wx:for="{{radioList}}" wx:key="index">
+        
+          <view style="margin-left:20px;">
+            <radio value='{{item.value}}' checked="{{item.checked}}">
+              {{item.name}}
+            </radio>
+          </view>
+        </block>
+      </radio-group>
+    </view>
+    <view class="flex-item flex-item-V content-text-3">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>对本区（单位）选人用人工作存在的主要问题是什么？（可多选）</text>
+      </view>
+        <checkbox-group bindchange="checkboxChange" >
+          <block wx:for="{{items}}" wx:key="index">
+          <view style="margin-left:20px;">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}">
+                {{item.name}}
+              </checkbox>
+          </view>
+        </block>
+        </checkbox-group>
+    </view>
+    <view class="flex-item flex-item-V content-text-3">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>您对解决上述存在的突出问题有何建议？</text>
+      </view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur"  style="height:150px;"/>
+    </view>
+    </view>
+    <view class="flex-item flex-item-V content-text-3">
+      <view>
+        <text class="content-text-1-title" style=""> <text class="content-text-1-title-mask"
+            style="">|</text>对本区（单位）选人用人有何意见建议？</text>
+      </view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur"  style="height:150px;width:90%"/>
+    </view>
+    </view>
+  </view>
+</view> -->
+<view>
+  <button style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px" bindtap="">
+    提交、进入新提拔干部民主评议 </button>
+</view>

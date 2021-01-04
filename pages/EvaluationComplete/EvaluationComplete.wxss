@@ -1,0 +1,5 @@
+/* pages/EvaluationComplete/EvaluationComplete.wxss */
+page{
+  font-size: 18px;
+  letter-spacing: 2px;
+}
