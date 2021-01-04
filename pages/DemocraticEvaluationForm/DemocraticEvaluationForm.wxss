@@ -132,6 +132,4 @@ checkbox{
   margin-top: 15px;
   margin-bottom: 15px;
 }
-textarea{
-  /* margin-top: 20px; */
-}
+

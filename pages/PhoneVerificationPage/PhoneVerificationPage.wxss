@@ -59,11 +59,7 @@ page{
   letter-spacing: 6px;
   background-color:#E8342F; 
 }
-button{
-  /* margin-top: 30rpx; */
-  /* margin-bottom: -30rpx; */
-  
-}
+
 
 .mini-btn{
   width: 100px;

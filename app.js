@@ -35,7 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    //  URL:'http://192.168.0.111:8080/whzzbpy'
-      URL:'http://pyadmin.whzg.gov.cn/'
+     // URL:'http://192.168.0.111:8080/whzzbpy'
+      URL:'https://py.whzg.gov.cn/'
   }
 })

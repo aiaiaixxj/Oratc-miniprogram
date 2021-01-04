@@ -1,5 +1,5 @@
 <!--pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm.wxml-->
-<view style="background-color:white;min-height:30px;">
+<view style="background-color:white;min-height:40px;">
     <text class="main_title"> <text class="main_title_mask">|</text> {{themeName}}</text>
  </view>
   <view class="flex-wrp" style="flex-direction:column;">

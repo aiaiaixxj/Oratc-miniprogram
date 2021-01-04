@@ -11,10 +11,10 @@
   </view> -->
   
   <view class='changeInfoName'>
-     <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}'/> 
+     <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}'  type="digit"/> 
   </view>
   <view class='changeInfoName'>
-     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:100%;'/>
+     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:100%;'  type="digit"/>
      <view class="mini-btn" type="default" size="mini" bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</view> 
   </view>
   
