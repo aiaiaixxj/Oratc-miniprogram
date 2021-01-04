@@ -62,13 +62,25 @@ Page({
           console.log(res.data);
           console.log(res.data.json);
           console.log(JSON.parse(res.data.json));
-          if(res.data.msg=='手机号已绑定'){
-            wx.showToast({
-              title: '手机号已绑定!',
-              icon: 'none',
-              duration: 1000
-            })
-          }
+          wx.showToast({
+              title:res.data.msg ,
+                 icon: 'none',
+                 duration: 2000
+               })
+          // if(res.data.msg=='手机号已绑定'){
+          //   wx.showToast({
+          //     title: '手机号已绑定!',
+          //     icon: 'none',
+          //     duration: 1000
+          //   })
+          // }
+          // if(res.data.msg=='手机号码已绑定账号，请使用原账号登录！'){
+          //   wx.showToast({
+          //     title: '手机号码已绑定账号，请使用原账号登录！',
+          //     icon: 'none',
+          //     duration: 1000
+          //   })
+          // }
           let mycode = JSON.parse(res.data.json)
           _this.setData({
             iscode: mycode.code
@@ -82,7 +94,6 @@ Page({
                 codename: '重新发送',
                 disabled: false
               })
-
             } else {
               _this.setData({
                 codename: num + "s"
@@ -91,10 +102,7 @@ Page({
           }, 1000)
         }
       })
-
     }
-
-
   },
   //获取验证码
   getVerificationCode() {

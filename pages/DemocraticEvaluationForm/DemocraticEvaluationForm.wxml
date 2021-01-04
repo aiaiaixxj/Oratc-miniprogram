@@ -1,21 +1,17 @@
 <!--pages/DemocraticEvaluationForm/DemocraticEvaluationForm.wxml-->
-<view>
-  <text class="main_title" style=""> <text class="main_title_mask" style="">|</text> {{themeName}}</text>
-</view>
-<view>
-  <view class="page-section">
-    <view wx:for="{{ questionArray}}" wx:key="*this" wx:for-item="questionitem">
-      <view class="flex-wrp" style="flex-direction:column;">
-        <view class="flex-item flex-item-V content-text-1 ">
-          <text class="" style="position:relative;top:20px "> <text class="content-text-1-title-mask"
-              style="">|</text>{{questionitem.questionContent}}</text>
+<view style="background-color:white;min-height:30px;">
+    <text class="main_title"> <text class="main_title_mask">|</text> {{themeName}}</text>
+ </view>
+<view wx:for="{{ questionArray}}" wx:key="*this" wx:for-item="questionitem">
+      <view class="flex-wrp">
+        <view class="flex-item flex-item-V content-text-1">
+          <view class="" style="margin-top:15px;text-indent: 20px;"> <text
+              class="content-text-1-title-mask" style="">| </text>{{questionitem.questionContent}}</view>
           <view wx:if="{{questionitem.flag ==0}}">
-            <radio-group bindchange="radiochange">
+            <radio-group bindchange="radiochange" data-id="{{questionitem.flag}}">
               <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
-
-                <view style="margin-left:20px;margin-top:20px">
-
-                  <radio value='{{questionitem.questionId}},{{optionitem.optionId}}'>
+                <view style="margin-left:20px;">
+                  <radio value='{{questionitem.questionId}},{{optionitem.optionId}}' checked="{{optionitem.check}}">
                     {{optionitem.optionContent}}
                   </radio>
                 </view>
@@ -24,23 +20,22 @@
           </view>
 
           <view wx:elif="{{questionitem.flag ==1}}">
-            <view style="margin-left:20px;">
-              <checkbox-group bindchange="checkboxChange">
+            <view style="margin-left:15px;">
+              <checkbox-group bindchange="checkboxChange" data-checks="{{}}">
                 <view wx:for="{{questionitem.optionArray}}" wx:key="*this" wx:for-item="optionitem">
-                <view style="margin-left:0px;">
-                  <checkbox value='{{questionitem.questionId}},{{optionitem.optionId}}' data-id="{{questionitem.questionId}}" bindtap="check">
-                    {{optionitem.optionContent}}
-                  </checkbox>
-                </view>
+                  <view style="">
+                    <checkbox value='{{questionitem.questionId}},{{optionitem.optionId}}'
+                      data-id="{{questionitem.questionId}}" bindtap="check" checked="{{optionitem.check}}">
+                      {{optionitem.optionContent}}
+                    </checkbox>
+                  </view>
                 </view>
               </checkbox-group>
             </view>
           </view>
           <view wx:elif="{{questionitem.flag ==2}}" bindtap="handleJumpPage" data-id="{{questionitem.questionId}}">
-
             <view class="textarea-wrp">
-
-              <textarea bindblur="bindTextAreaBlur" style="height:150px;" />
+              <textarea bindblur="bindTextAreaBlur" style="height:200px;" value="{{questionitem.remark}}" />
               </view>
             </view>
                
@@ -49,9 +44,15 @@
         </view>
       </view>
 
-    </view>
+   
+        <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V">
+           <button style="background-color:#D8271D;width:100%;color:white;font-size:18px;   letter-spacing:3px;margin-bottom:15px;" bindtap="completeDemocraticEvaluationForm">
+            提交、进入新提拔干部民主评议 </button>
+        </view>
+    
   </view>
-
+    
 
 
 
@@ -125,6 +126,5 @@
   </view>
 </view> -->
 <view>
-  <button style="background-color:#D8271D;width:100%;color:white;font-size:14px; letter-spacing:3px;margin-bottom:20px" bindtap="">
-    提交、进入新提拔干部民主评议 </button>
+
 </view>

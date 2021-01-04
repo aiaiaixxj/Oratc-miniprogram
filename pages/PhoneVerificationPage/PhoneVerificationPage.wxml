@@ -3,8 +3,8 @@
 
 
 <image class="img" src="../../images/bg_login.jpg" style="" mode="">
-  
 </image>
+<image class="" src="../../images/title.png" style="position:absolute;width:65%;height:17%;left:16%;top:20%"></image>
 <view class='changeInfo'>
   <!-- <view class='changeInfoName'>
      <input placeholder='请输入姓名' bindinput='getNameValue' value='{{name}}'/> 
@@ -14,10 +14,10 @@
      <input placeholder='请输入手机号' bindinput='getPhoneValue' value='{{phone}}'/> 
   </view>
   <view class='changeInfoName'>
-     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:100%;'/> 
-    
+     <input placeholder='请输验证码' bindinput='getCodeValue' value='{{code}}' style='width:100%;'/>
+     <view class="mini-btn" type="default" size="mini" bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</view> 
   </view>
-  <button class="mini-btn" type="default" size="mini" bindtap='getVerificationCode' disabled='{{disabled}}' >{{codename}}</button>
+  
   <view class='changeBtn' bindtap='save'>验证</view>
 </view>
 </view>

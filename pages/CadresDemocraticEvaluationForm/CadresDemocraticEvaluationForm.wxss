@@ -1,17 +1,22 @@
 /* pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm.wxss */
+page{
+  background-color:#EEEEEE ;
+}
 .main_title {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
   text-indent: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main_title_mask {
   color: #D8271D;
   font-weight: bolder;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .page-section {
@@ -33,10 +38,9 @@
 
 .flex-item-V {
   margin: 0 auto;
-  margin-top: 20rpx;
+  margin-top: 10px;
   width: 96%;
-  height: 300rpx;
-  border-radius: 10px;
+  min-height: 300rpx;
 }
 
 .content-text-1 {
@@ -45,17 +49,16 @@
   justify-content: center;
   background-color: white;
   color: black;
-  font-size: 36rpx;
+  font-size: 20px;
 }
 
 .content-text-1-info {
   display: flex;
   flex-direction: column;
-  color: black;
-  font-size: 16px;
+  /* color: black; */
+  font-size: 20px;
   margin: 20 auto;
-  margin-top: 13px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .content-text-2 {
@@ -89,16 +92,16 @@
 .content-text-1-title-mask {
   color: #D8271D;
   font-weight: bolder;
-  font-size: 15px;
 }
 
 radio {
-  zoom: 80%;
+  zoom: 100%;
   color: black;
+  margin-top: 15px;
 }
 
 radio-group {
-  margin-top: 20rpx
+  margin-bottom: 15px;
 }
 
 .textarea-wrp {
@@ -107,19 +110,36 @@ radio-group {
   margin-left: 20rpx;
   background-color: #fff;
   border: 1px solid gray;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-
+textarea{
+  margin-top: 5px;
+}
 button {
   background-color: #D8271D;
   color: white;
   font-size: 14px;
   letter-spacing: 3px;
+  width:20px ;
 }
 
 .bottom-bar {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  background-color: #EEEEEE;
+  /* background-color: #EEEEEE; */
+  margin-bottom: 20px;
+
+}
+.btn{
+  background-color: #D8271D;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  width:150px ;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
 }

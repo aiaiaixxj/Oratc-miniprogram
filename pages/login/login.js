@@ -27,7 +27,6 @@ Page({
       _this.setData({
         username: wx.getStorageSync("username"),
         password: wx.getStorageSync("password"),
-
       })
   },
   login: function (e) {
@@ -44,7 +43,7 @@ Page({
     }
     console.log("this.data.username:", that.data.username)
     wx.request({
-      url: app.globalData.URL + '/app/member-login.jspx.jspx', //自己的服务接口地址
+      url: app.globalData.URL + '/app/member-login.jspx', //自己的服务接口地址
       method: 'post',
       data: {
         username: that.data.username,
@@ -60,10 +59,6 @@ Page({
         console.log(e);
         //4.解密成功后 获取自己服务器返回的结果
         if (res.data.code == 1) {
-          // wx.setStorageSync("userId",e.userId);
-          // wx.setStorageSync("realname",e.realname);
-          // wx.setStorageSync("times",e.times);
-          // wx.setStorageSync("orgname",e.orgname);
           wx.setStorageSync("accountId",e.accountId);
             wx.navigateTo({
                 url: '../PhoneVerificationPage/PhoneVerificationPage',

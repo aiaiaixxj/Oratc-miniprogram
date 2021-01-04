@@ -1,11 +1,16 @@
 /* pages/DemocraticEvaluationForm/DemocraticEvaluationForm.wxss */
+page{
+  background-color:#EEEEEE ;
+}
 .main_title {
   font-weight: 400;
-  font-size: 40rpx;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
   text-indent: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .main_title_mask {
@@ -16,7 +21,6 @@
 
 .page-section {
   /* display:flex; */
-  margin-top: 20rpx;
   background-color: #EEEEEE;
 }
 
@@ -33,9 +37,9 @@
 
 .flex-item-V {
   margin: 0 auto;
-  margin-top: 50rpx;
+  margin-top: 10px;
   width: 96%;
-  min-height: 600rpx;
+  min-height:100rpx;
   /* background-color: blue; */
   /* border-radius: 10px; */
 }
@@ -46,7 +50,7 @@
   justify-content: center;
   background-color: white;
   color: black;
-  font-size: 36rpx;
+  font-size: 20px;
 }
 
 /* .content-text-1:before{
@@ -90,7 +94,7 @@
 } */
 .content-text-1-title {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
@@ -101,7 +105,6 @@
 .content-text-1-title-mask {
   color: #D8271D;
   font-weight: bolder;
-  font-size: 20px;
 }
 radio {
   zoom: 100%;
@@ -109,14 +112,14 @@ radio {
   margin-top: 15px;
 }
 radio-group{
-  margin-top:20rpx
+  /* margin-top:20px;*/
+  margin-bottom:15px 
 }
 checkbox-group{
-  margin-top:10rpx;
-
+  font-size: 20px;
+  margin-bottom:15px;
 }
 checkbox{
-  zoom: 90%;
   color: black; 
   margin-top: 15px;
 }
@@ -126,5 +129,9 @@ checkbox{
   margin-left: 20rpx;
   background-color: #fff;
   border: 1px solid gray;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+textarea{
+  /* margin-top: 20px; */
 }

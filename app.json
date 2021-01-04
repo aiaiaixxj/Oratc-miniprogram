@@ -1,19 +1,17 @@
 {
   "pages": [
-    "pages/DemocraticEvaluationForm/DemocraticEvaluationForm",
-    "pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm",
+    
     "pages/login/login",
+    "pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm",
 
-
-
-
-
+    "pages/DemocraticEvaluationForm/DemocraticEvaluationForm",
   
+   
+   
+  
+   
+
     "pages/EvaluationComplete/EvaluationComplete",
-
-
-   
-   
     "pages/index/index",
     "pages/logs/logs"
 

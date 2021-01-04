@@ -1,60 +1,56 @@
 <!--pages/CadresDemocraticEvaluationForm/CadresDemocraticEvaluationForm.wxml-->
-<view>
-  <text class="main_title" style=""> <text class="main_title_mask" style="">|</text>{{themeName}}</text>
-</view>
-<view class="page-section">
+<view style="background-color:white;min-height:30px;">
+    <text class="main_title"> <text class="main_title_mask">|</text> {{themeName}}</text>
+ </view>
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item flex-item-V content-text-1">
-      <view class="content-text-1-info" style="">
-        <block wx:for="{{questionArray}}" wx:key="index">
-          <view style="">
-            姓名：{{item.realname}}
-          </view>
-          <view style="">
-            出生年月：{{item.birthday}}
-          </view>
-          <view style="">
-            原任职务：{{item.originaljob}}
-          </view>
-          <view style="">
-            现任职务：{{item.currentjob}}
-          </view>
-          <view style="">
-            任职时间：{{item.workdate}}
-          </view>
-        </block>
+      <view class="content-text-1-info" style="margin-left:20px;margin-top:15px;">
+        <!-- <block wx:for="{{questionArray}}" wx:key="index"> -->
+        <view style="">
+          姓名：{{questionArray[0].realname}}
+        </view>
+        <view style="margin-top:10px">
+          出生年月：{{questionArray[0].birthday}}
+        </view>
+        <view style="margin-top:10px">
+          原任职务：{{questionArray[0].originaljob}}
+        </view>
+        <view style="margin-top:10px">
+          现任职务：{{questionArray[0].currentjob}}
+        </view>
+        <view style="margin-top:10px;margin-bottom:10px">
+          任职时间：{{questionArray[0].workdate}}
+        </view>
+        <!-- </block> -->
       </view>
     </view>
-
   </view>
   <view class="flex-wrp" style="flex-direction:column;">
     <view class="flex-item flex-item-V content-text-1 ">
-      <text class="" style="position:relative;top:20px "> <text class="content-text-1-title-mask"
-          style="">|</text>sss</text>
       <view wx:if="{{questionArray[0].flag ==0}}">
         <radio-group bindchange="radiochange">
-
           <view wx:for="{{ questionArray[0].optionArray}}" wx:key="*this" wx:for-item="optionitem">
             <view style="margin-left:20px;">
-
-              <radio value='{{optionitem.questionId}},{{optionitem.optionId}}'>
+              <radio value='{{ questionArray[0].questionId}},{{optionitem.optionId}}' checked="{{optionitem.check}}">
                 {{optionitem.optionContent}}
               </radio>
             </view>
           </view>
         </radio-group>
       </view>
-      <view wx:elif="{{questionArray[1].flag ==2}}">
-        <text>222</text>
-        <view class="textarea-wrp">
-          <textarea bindblur="bindTextAreaBlur" style="height:150px;" />
-          </view>
-            </view>    
-            <!-- <text>{{optionitem.optionContent}}</text> -->
-          </view>
+      <view style="height:10px;background-color: #EEEEEE;"> </view>
+      <view wx:if="{{questionArray[1].flag ==2}}" bindtap="handleJumpPage" data-id="{{questionArray[1].questionId}}" style="text-indent: 20px;">
+        <view style="margin-top:10px;"><text class="" style=""> <text class="content-text-1-title-mask"
+              style="">|</text>{{questionArray[1].questionContent}}</text>
         </view>
+        <view class="textarea-wrp">
+          <textarea bindblur="bindTextAreaBlur" style="height:200px;" value="{{questionArray[1].remark}}" />
+          </view>
+      </view>    
+    </view>
 </view>
-  <!-- <view class="bottom-bar" style="">
-  <button  style=""> 上一位 </button>
-  <button  style=""> 下一位 </button>
-</view> -->
+<view class="bottom-bar" style="">
+      <view class="btn" style="" bindtap="BeforeStep" hidden="{{hiddenBeforeStep}}"> 上一位 </view>
+      <view  class="btn" style="" bindtap="NextStep"  hidden="{{hiddenNextStep}}" > 下一位 </view>
+      <view  class="btn" style="" bindtap="Complete"  hidden="{{hiddenComplete}}" > 完成评价 </view>
+</view>   

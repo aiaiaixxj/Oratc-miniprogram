@@ -19,6 +19,7 @@ page{
   flex-direction: column;
   justify-content: space-between; */
   position: absolute;
+  top: 18%;
   width: 90%;
   margin: 40% auto;
 }
@@ -59,11 +60,20 @@ page{
   background-color:#E8342F; 
 }
 button{
-  margin-top: 30rpx;
-  margin-bottom: 30rpx;
-  margin-left: 67%;
+  /* margin-top: 30rpx; */
+  /* margin-bottom: -30rpx; */
+  
 }
 
 .mini-btn{
-  margin-right: 10rpx;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: -40px;
+  left: 72%;
+  z-index: 999;
+  background-color: red;
+  line-height: 40px;
+  text-align: center;
+  color: white;
 }
